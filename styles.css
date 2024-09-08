@@ -1,0 +1,297 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Adjust for fixed header */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f04e23;
+    text-shadow: 0 0 10px rgba(240, 78, 35, 0.6);
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 2.8em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Banner styles */
+#banner {
+    position: relative;
+    overflow: hidden;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(75%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+#banner img:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+/* Featured products */
+#featured-products {
+    padding: 60px 20px; /* Add padding for mobile */
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+}
+
+#featured-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Product list for desktop and mobile */
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    border: 3px solid transparent; /* Initial transparent border */
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    border-color: #f04e23; /* Change border to orange on hover */
+}
+
+.product:active {
+    border-color: #f04e23; /* Change border to orange on click */
+    transform: scale(0.98);
+}
+
+.product img {
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.product p {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #f04e23;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #d03e1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(208, 62, 26, 0.5);
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.contact-info li {
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #3b5998;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+    color: #f04e23;
+}
+
+/* About Us section */
+#about-us {
+    padding: 60px 20px;
+    background-color: #fafafa;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+#about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #f04e23; /* Orange underline */
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+#about-us p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+    text-align: justify;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#about-us p:hover {
+    color: #333; /* Darken text on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 768px) {
+    /* Navigation changes for mobile */
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #featured-products h2 {
+        font-size: 2em;
+    }
+
+    .product {
+        width: 90%; /* Make product cards fill more space on mobile */
+        max-width: 300px;
+    }
+
+    button {
+        width: 100%; /* Full-width button for mobile */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Smaller screens (phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #featured-products {
+        padding: 30px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: 1.1em;
+    }
+
+    button {
+        padding: 12px 20px; /* Slight padding adjustment for smaller screens */
+    }
+}
